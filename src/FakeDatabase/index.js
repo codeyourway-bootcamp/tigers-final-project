@@ -7,7 +7,10 @@ export const user_registration = {
     "user_passoword",
     "user_currency",
   ],
-  data: ["123456", "josemaral@gmail.com", "Jose", "Amaral", "123456", "BRL"],
+  data: [
+    ["123456", "josemaral@gmail.com", "Jose", "Amaral", "123456", "BRL"],
+    ["123457", "ivo@gmail.com", "Ivo", "Melgaço", "123457", "BRL"],
+  ],
 };
 export const currency = {
   labels: ["currency_id", "currency_title", "symbol"],
