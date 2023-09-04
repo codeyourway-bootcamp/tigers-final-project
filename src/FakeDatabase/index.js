@@ -70,7 +70,7 @@ export const transaction = new Promise((resolve, reject) => {
       data: {
         user_id: "123456",
         category_id: "Casa",
-        transaction_date: "1",
+        transaction_id: "1",
         transaction_date: "04/09/2023",
         transaction_name: "Energia Eletrica",
         transaction_description: "Despesas Energia Eletrica",
