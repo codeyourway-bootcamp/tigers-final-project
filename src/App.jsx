@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import { user_registration } from "./FakeDatabase";
+import Navbar from "./Components/Navbar";
+import Footer from "./Components/Footer";
 function App() {
   // Usando FakeDatabase com um estado
   const [users, setUsers] = useState(null);
@@ -9,14 +11,18 @@ function App() {
     });
   }, []);
   return (
-    <>
+    <> 
+      <Navbar/>
       <div>Hello Word</div>
       <div>
         {users
           ? users.data[0].user_first_name + " " + users.data[0].user_last_name
           : "Carregando..."}{" "}
-      </div>
+     
+      </div> 
+      <Footer/>
     </>
+
   );
 }
 
