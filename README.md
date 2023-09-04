@@ -1,4 +1,6 @@
-# Projet React + Vite
+# MoneyMinder
+
+## Projeto finanças pessoais
 
 Integrantes do Grupo:
 
