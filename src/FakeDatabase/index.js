@@ -1,25 +1,43 @@
-export const user_registration = {
-  labels: [
-    "user_id",
-    "user_email",
-    "user_first_name",
-    "user_last_name",
-    "user_passoword",
-    "user_currency",
-  ],
-  data: [
-    ["123456", "josemaral@gmail.com", "Jose", "Amaral", "123456", "BRL"],
-    ["123457", "ivo@gmail.com", "Ivo", "Melgaço", "123457", "BRL"],
-  ],
-};
+export const user_registration = new Promise((resolve, reject) => {
+ setTimeout(() => {
+  resolve({
+    labels: [
+      "user_id",
+      "user_email",
+      "user_first_name",
+      "user_last_name",
+      "user_password",
+      "user_currency",
+    ],
+    data: [
+      {
+        user_id: "123456",
+        user_email: "josemaral@gmail.com",
+        user_first_name: "Jose",
+        user_last_name: "Amaral",
+        user_password: "123456",
+        user_currency: "BRL",
+      },
+      {
+        user_id: "123457",
+        user_email: "ivonel@gmail.com",
+        user_first_name: "Ivonel",
+        user_last_name: "Malegaço",
+        user_password: "123457",
+        user_currency: "BRL",
+      },
+    ],
+  });
+ }, 2000); 
+});
 export const currency = {
   labels: ["currency_id", "currency_title", "symbol"],
-  data: ["BRL", "Real", "R$"],
+  data: { currency_id: "BRL", currency_title: "Real", symbol: "R$" },
 };
 
 export const category = {
   labels: ["user_id", "category_ id", "category_ name"],
-  data: ["1", "Casa", "Despesas com Casa"],
+  data: { user_id: "1", category_: "Casa", category_name: "Despesas com Casa" },
 };
 
 export const transaction = {
@@ -34,15 +52,15 @@ export const transaction = {
     "transaction_type",
     "transaction_attached_address",
   ],
-  data: [
-    "123456",
-    "Casa",
-    "1",
-    "04/09/2023",
-    "Energia Eletrica",
-    "Despesas Energia Eletrica",
-    "550,00",
-    "D",
-    "googledrive",
-  ],
+  data: {
+    user_id: "123456",
+    category_id: "Casa",
+    transaction_date: "1",
+    transaction_date: "04/09/2023",
+    transaction_name: "Energia Eletrica",
+    transaction_description: "Despesas Energia Eletrica",
+    transaction_value: "550,00",
+    transaction_type: "D",
+    transaction_attached_address: "googledrive",
+  },
 };
