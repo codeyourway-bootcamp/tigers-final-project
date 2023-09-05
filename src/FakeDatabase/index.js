@@ -12,7 +12,7 @@ export const user_registration = new Promise((resolve, reject) => {
       data: [
         {
           user_id: "123456",
-          user_email: "josemaral@gmail.com",
+          user_email: "joseamaral@gmail.com",
           user_first_name: "Jose",
           user_last_name: "Amaral",
           user_password: "123456",
