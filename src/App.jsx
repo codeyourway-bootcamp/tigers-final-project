@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { user_registration } from "./FakeDatabase";
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
+import Button from "./Components/Button";
 function App() {
   // Usando FakeDatabase com um estado
   const [users, setUsers] = useState(null);
@@ -20,6 +21,7 @@ function App() {
           : "Carregando..."}{" "}
      
       </div> 
+      <Button/>
       <Footer/>
     </div> 
 
