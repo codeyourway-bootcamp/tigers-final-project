@@ -6,5 +6,5 @@ Integrantes do Grupo:
 
 - Jose Amaral
 - Ivo Melgaço
-- Yasmin
+- Yasmim
 - Diego Gonçalves
