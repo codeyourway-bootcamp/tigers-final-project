@@ -12,7 +12,7 @@ function App() {
     });
   }, []);
   return (
-    <> 
+    <div style={{height: "85vh"}}> 
       <Navbar/>
       <div>Hello Word</div>
       <div>
@@ -23,7 +23,7 @@ function App() {
       </div> 
       <Button/>
       <Footer/>
-    </>
+    </div> 
 
   );
 }
