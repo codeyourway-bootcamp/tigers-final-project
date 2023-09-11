@@ -1,8 +1,11 @@
+import Navbar from "../../Components/Navbar";
 import "./style.css"
 function Dashboard() {
   return (
-<div>
+<div display={"flex"}>
+    <Navbar/> 
     <h1>Dashboard</h1>
+    
 </div>
   )
   

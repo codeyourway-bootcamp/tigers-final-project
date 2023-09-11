@@ -1,16 +1,50 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
-import Navbar from './Components/Navbar/index.jsx'
-import { ChakraProvider } from '@chakra-ui/react'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { ChakraProvider } from "@chakra-ui/react";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import LandingPage from "./Pages/LandingPage";
+import Login from "./Pages/Login";
+import Cadastro from "./Pages/Cadastro";
+import Dashboard from "./Pages/Dashboard/";
+import Charts from "./Pages/Charts";
+import Historic from "./Pages/Historic";
+import Profile from "./Pages/Profile";
 
-
-
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.createRoot(document.getElementById("root")).render(
   <ChakraProvider>
-  <React.StrictMode>
-    <App />
-    <Navbar/>
-  </React.StrictMode>,
+    <React.StrictMode>
+      <RouterProvider
+        router={createBrowserRouter([
+          {
+            path: "/",
+            element: <LandingPage />,
+          },
+          {
+            path: "/login",
+            element: <Login />,
+          },
+          {
+            path: "/cadastro",
+            element: <Cadastro />,
+          },
+          {
+            path: "/dashboard",
+            element: <Dashboard />,
+          },
+          {
+            path: "/charts",
+            element: <Charts />,
+          },
+          {
+            path: "/historic",
+            element: <Historic />,
+          },
+          {
+            path: "/profile",
+            element: <Profile />,
+          },
+        ])}
+      />
+    </React.StrictMode>
   </ChakraProvider>
-)
+);
