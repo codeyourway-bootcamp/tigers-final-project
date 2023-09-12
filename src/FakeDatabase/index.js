@@ -8,6 +8,8 @@ export const user_registration = new Promise((resolve, reject) => {
         "user_last_name",
         "user_password",
         "user_currency",
+        "user_country",
+
       ],
       data: [
         {
@@ -16,7 +18,9 @@ export const user_registration = new Promise((resolve, reject) => {
           user_first_name: "Jose",
           user_last_name: "Amaral",
           user_password: "123456",
-          user_currency: "BRL",
+          user_currency: "R$",
+          user_country: "BRASIL",
+
         },
         {
           user_id: "123457",
@@ -24,7 +28,8 @@ export const user_registration = new Promise((resolve, reject) => {
           user_first_name: "Ivonel",
           user_last_name: "Malegaço",
           user_password: "123457",
-          user_currency: "BRL",
+          user_currency: "€",
+           user_country: "PORTUGAL",
         },
       ],
     });
@@ -36,6 +41,7 @@ export const currency = new Promise((resolve, reject) => {
     resolve({
       labels: ["currency_id", "currency_title", "symbol"],
       data: { currency_id: "BRL", currency_title: "Real", symbol: "R$" },
+      data: { currency_id: "EURO", currency_title: "Euro", symbol: "€" },
     });
   }, 2000);
 });
@@ -81,3 +87,4 @@ export const transaction = new Promise((resolve, reject) => {
     });
   }, 2000);
 });
+
