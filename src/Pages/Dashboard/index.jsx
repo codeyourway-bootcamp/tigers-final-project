@@ -7,9 +7,8 @@ function Dashboard() {
   return (
 <div display={"flex"}>
     <Navbar/> 
-    <MainButton onClick={()=>{alert("Botão chamado Dashboard" )}} scheme={"solid"}>Login</MainButton>
-    <h1>Dashboard</h1>
-    <AiFillSetting size={"50"} color={"blue"}/>
+    <h1>Dashboard</h1>   
+   
     
 </div>
   )
@@ -17,3 +16,5 @@ function Dashboard() {
 }
 
 export default Dashboard;
+
+//<MainButton onClick={()=>{alert("Botão chamado Dashboard" )}} scheme={"solid"}>Login</MainButton>
