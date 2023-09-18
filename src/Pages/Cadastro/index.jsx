@@ -3,7 +3,7 @@ import Navbar from "../../Components/Navbar";
 function Cadastro() {
   return (
     <div>
-      <Navbar />
+      <Navbar isTransparent={false}/>
       <h1 style={{ textAlign: "center" }}>Cadastro</h1>
       <Form isRegister={true} />
     </div>

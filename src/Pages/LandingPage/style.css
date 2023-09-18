@@ -1,0 +1,18 @@
+.expanding-image {
+  animation: expand 2s infinite;
+
+
+  
+@keyframes expand {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+}

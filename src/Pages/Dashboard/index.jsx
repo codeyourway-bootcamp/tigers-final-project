@@ -1,13 +1,14 @@
-import MainButton from "../../Components/Button";
 import Navbar from "../../Components/Navbar";
+import HistoricList from "../../Components/HistoricList"
 import "./style.css"
-import {AiFillSetting} from "react-icons/Ai"
 
 function Dashboard() {
   return (
 <div display={"flex"}>
-    <Navbar/> 
-    <h1>Dashboard</h1>   
+    <Navbar isTransparent={false}/>
+    <h1>Dashboard</h1>  
+
+    <HistoricList/>
    
     
 </div>
