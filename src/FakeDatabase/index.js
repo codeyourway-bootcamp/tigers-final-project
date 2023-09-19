@@ -29,7 +29,7 @@ export const user_registration = new Promise((resolve, reject) => {
           user_last_name: "Malegaço",
           user_password: "123457",
           user_currency: "€",
-           user_country: "PORTUGAL",
+          user_country: "PORTUGAL",
         },
       ],
     });

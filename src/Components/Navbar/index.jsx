@@ -1,20 +1,34 @@
-import { Box } from "@chakra-ui/react";
-import "./style.css";
+import { Box, Button } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
-import MainButton from "../Button";
-
 export default function Navbar() {
   return (
-    <Box marinX={5} bg="white" w="100%"p={4} color="blue" display={"flex"} alignItems={"center"}>
-      <img style={{width:'100px', marginLeft:"10px"}} src="/MoneyMinder.png" alt="Logo MoneyMinder" />
-      <hr />
-      <Box justifyContent={"flex-end"} w="100%" display={"flex"}textAlign={"right"}>
-      <div style={{ marginRight: "20px" }}>
-          <MainButton>Login</MainButton>
-        </div>
-        <div style={{ marginRight: "10px" }}>
-          <MainButton>Cadastro</MainButton>
-        </div>
+    <Box
+      bg="white"
+      boxShadow="0 2px 4px rgba(0, 0, 0, 0.05)"
+      py={3}
+      px={6}
+      display="flex"
+      justifyContent="space-between"
+      alignItems="center"
+    >
+      <Box>
+        <img
+          src="/MoneyMinder.png"
+          alt="Logo MoneyMinder"
+          style={{ width: "100px" }}
+        />
+      </Box>
+      <Box>
+        <Link to="/login">
+          <Button variant="outline" colorScheme="blue" mr={4}>
+            Login
+          </Button>
+        </Link>
+        <Link to="/cadastro">
+          <Button variant="solid" colorScheme="blue">
+            Cadastro
+          </Button>
+        </Link>
       </Box>
     </Box>
   );
