@@ -3,7 +3,7 @@ import HistoricList from "../../Components/HistoricList";
 function Historic() {
   return (
     <div>
-      <Navbar isTransparent={false}/>
+      <Navbar isTransparent={false} isLandingPage={false}/>
       <h1>Historic</h1>
       <HistoricList/>
     </div>

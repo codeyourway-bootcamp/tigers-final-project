@@ -1,9 +1,9 @@
 import { Box, Button } from "@chakra-ui/react";
 import { Link, useLocation } from "react-router-dom";
 import PropTypes from "prop-types";
-import { BiSolidBarChartSquare } from 'react-icons/bi';
+import { BiSolidBarChartSquare } from "react-icons/bi";
 
-export default function Navbar({ isTransparent }) {
+export default function Navbar({ isTransparent, isLandingPage }) {
   const location = useLocation();
 
   const navbarStyle = {
@@ -15,6 +15,10 @@ export default function Navbar({ isTransparent }) {
       isTransparent && location.pathname === "/"
         ? "0 2px 4px rgba(0, 0, 0, 0.2)"
         : "0 2px 4px rgba(0, 0, 0, 0.05)",
+    position: 
+      isLandingPage && location.pathname === "/" 
+    ? "absolute" 
+    : "fixed", // Ajuste na lógica
   };
 
   return (
@@ -26,14 +30,14 @@ export default function Navbar({ isTransparent }) {
       display="flex"
       justifyContent="space-between"
       alignItems="center"
-      position="absolute"
+      position={navbarStyle.position}
       width="100%"
       top="0"
       zIndex="1"
     >
       <Box style={{ display: "flex", alignItems: "center" }}>
-        <Box style={{display: "flex", alignItems:"center "}}>
-          <BiSolidBarChartSquare size={55} color="rgba(66, 153, 225, 1)"/>
+        <Box style={{ display: "flex", alignItems: "center " }}>
+          <BiSolidBarChartSquare size={55} color="rgba(66, 153, 225, 1)" />
           <h1> MoneyMinder</h1>
         </Box>
       </Box>
@@ -54,4 +58,5 @@ export default function Navbar({ isTransparent }) {
 }
 Navbar.propTypes = {
   isTransparent: PropTypes.bool.isRequired,
+  isLandingPage: PropTypes.bool.isRequired,
 };

@@ -1,0 +1,27 @@
+.bottom-navigate {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(66, 153, 225, 1);
+  padding: 10px 0;
+  width: 50%;
+  border-radius: 10px;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  text-align: center;
+  font-size: 14px;
+}
+
+.nav-item span {
+  margin-top: 5px;
+  font-size: 12px;
+}
