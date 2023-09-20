@@ -4,7 +4,7 @@ import { ChakraProvider } from "@chakra-ui/react";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import LandingPage from "./Pages/LandingPage";
 import Login from "./Pages/Login";
-import Cadastro from "./Pages/Cadastro";
+import Register from "./Pages/Register";
 import Dashboard from "./Pages/Dashboard/";
 import Charts from "./Pages/Charts";
 import Historic from "./Pages/Historic";
@@ -24,8 +24,8 @@ ReactDOM.createRoot(document.getElementById("root")).render(
             element: <Login />,
           },
           {
-            path: "/cadastro",
-            element: <Cadastro />,
+            path: "/register",
+            element: <Register />,
           },
           {
             path: "/dashboard",

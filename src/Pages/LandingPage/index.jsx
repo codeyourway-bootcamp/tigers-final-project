@@ -13,7 +13,7 @@ export default function LandingPage() {
         overflow="hidden"
         className="expanding-image" // Aplicando a classe para o efeito de expansão
       >
-        <Navbar isTransparent={true} />
+        <Navbar isTransparent={true} isLandingPage={true} />
       </Box>
     </div>
   );
