@@ -1,6 +1,7 @@
 import { Box, Button } from "@chakra-ui/react";
 import { Link, useLocation } from "react-router-dom";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
+import { BiSolidBarChartSquare } from 'react-icons/bi';
 
 export default function Navbar({ isTransparent }) {
   const location = useLocation();
@@ -30,13 +31,11 @@ export default function Navbar({ isTransparent }) {
       top="0"
       zIndex="1"
     >
-      <Box style={{display:"flex", alignItems:"center", }}>
-        <img
-          src="/MoneyMinder.png"
-          alt="Logo MoneyMinder"
-          style={{ width: "100px" }}
-        />
-        <h1>MoneyMinder</h1>
+      <Box style={{ display: "flex", alignItems: "center" }}>
+        <Box style={{display: "flex", alignItems:"center "}}>
+          <BiSolidBarChartSquare size={55} color="rgba(66, 153, 225, 1)"/>
+          <h1> MoneyMinder</h1>
+        </Box>
       </Box>
       <Box>
         <Link to="/login">

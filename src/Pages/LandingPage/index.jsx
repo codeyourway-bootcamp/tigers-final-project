@@ -5,7 +5,7 @@ export default function LandingPage() {
   return (
     <div>
       <Box
-        bg="url('/pessoa-feliz.jpg')" 
+        bg="url('/familly.jpg')" 
         bgSize="cover"
         bgPosition="center"
         minHeight="100vh"
