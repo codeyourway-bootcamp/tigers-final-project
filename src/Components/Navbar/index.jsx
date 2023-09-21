@@ -15,10 +15,7 @@ export default function Navbar({ isTransparent, isLandingPage }) {
       isTransparent && location.pathname === "/"
         ? "0 2px 4px rgba(0, 0, 0, 0.2)"
         : "0 2px 4px rgba(0, 0, 0, 0.05)",
-    position: 
-      isLandingPage && location.pathname === "/" 
-    ? "absolute" 
-    : "fixed", // Ajuste na lógica
+    position: isLandingPage && location.pathname === "/" ? "absolute" : "fixed", // Ajuste na lógica
   };
 
   return (
@@ -49,7 +46,7 @@ export default function Navbar({ isTransparent, isLandingPage }) {
         </Link>
         <Link to="/cadastro">
           <Button variant="solid" colorScheme="blue">
-            Cadastro
+            Register
           </Button>
         </Link>
       </Box>

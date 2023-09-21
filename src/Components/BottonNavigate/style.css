@@ -8,8 +8,13 @@
   transform: translateX(-50%);
   background-color: rgba(66, 153, 225, 1);
   padding: 10px 0;
-  width: 50%;
+  width: 40%;
   border-radius: 10px;
+  transition: transform 0.2s ease-out; /* Adiciona uma transição suave à transformação */
+}
+
+.bottom-navigate:hover {
+  transform: translateX(-50%) scale(1.1);
 }
 
 .nav-item {
@@ -19,9 +24,18 @@
   color: white;
   text-align: center;
   font-size: 14px;
+  transition: transform 0.2s ease-out; /* Adiciona uma transição suave à transformação */
 }
 
 .nav-item span {
   margin-top: 5px;
   font-size: 12px;
 }
+
+.nav-item:hover {
+  transform: scale(1.2); /* Aumenta o tamanho do ícone ao passar o mouse */
+}
+
+/*.nav-item:hover ~ .nav-item {
+  transform: scale(0.8) translateX(-7px); /* Reduz o tamanho e desloca os outros ícones ao passar o mouse 
+}*/
