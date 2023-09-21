@@ -1,6 +1,10 @@
+import { Container } from "@chakra-ui/react";
+import PageContainer from "../PageContainer";
 
 function Charts() {
-  return <div />;
+  return (
+    
+  );
 }
 
 export default Charts;

@@ -8,6 +8,7 @@ import {
   Button,
 } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
+import PageContainer from "../PageContainer";
 export default function Form(props) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -37,50 +38,52 @@ export default function Form(props) {
     });
   };
 
-  const Registro = () => {console.log('Funcao de registro')}
+  const Registro = () => {
+    console.log("Funcao de registro");
+  };
 
   return (
-    <Container>
-      {props.isRegister ? (
-        <>
-          {" "}
-          <FormControl>
-            <FormLabel>Nome</FormLabel>
-            <Input
-              type="text"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-            />
-          </FormControl>
-          <FormControl>
-            <FormLabel>Sobrenome</FormLabel>
-            <Input
-              type="text"
-              value={sobrenome}
-              onChange={(e) => setSobrenome(e.target.value)}
-            />
-          </FormControl>
-        </>
-      ) : null}
+    <PageContainer>
+      <Container>
+        {props.isRegister ? (
+          <>
+            {" "}
+            <FormControl>
+              <FormLabel>Nome</FormLabel>
+              <Input
+                type="text"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+              />
+            </FormControl>
+            <FormControl>
+              <FormLabel>Sobrenome</FormLabel>
+              <Input
+                type="text"
+                value={sobrenome}
+                onChange={(e) => setSobrenome(e.target.value)}
+              />
+            </FormControl>
+          </>
+        ) : null}
 
-      <FormControl>
-        <FormLabel>Email</FormLabel>
-        <Input
-          type="text"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-      </FormControl>
-      <FormControl>
-        <FormLabel>Password</FormLabel>
-        <Input
-          type="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
-      </FormControl>
-      {
-        (props.isRegister ? (
+        <FormControl>
+          <FormLabel>Email</FormLabel>
+          <Input
+            type="text"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+        </FormControl>
+        <FormControl>
+          <FormLabel>Password</FormLabel>
+          <Input
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+        </FormControl>
+        {props.isRegister ? (
           <Button
             marginY={"3"}
             onClick={() => {
@@ -100,8 +103,8 @@ export default function Form(props) {
           >
             Entrar
           </Button>
-        ))
-      }
-    </Container>
+        )}
+      </Container>
+    </PageContainer>
   );
 }

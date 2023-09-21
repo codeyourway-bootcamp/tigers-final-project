@@ -1,4 +1,4 @@
-import BottomNavigate from "../../Components/BottonNavigate";
+import BottomNavigate from "../../Components/BottomNavigate";
 import Navbar from "../../Components/Navbar";
 import PageContainer from "../../Components/PageContainer";
 function Profile() {
