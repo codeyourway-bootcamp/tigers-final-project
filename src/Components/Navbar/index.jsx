@@ -30,7 +30,7 @@ export default function Navbar({ isTransparent, isLandingPage }) {
       position={navbarStyle.position}
       width="100%"
       top="0"
-      zIndex="1"
+      zIndex="1000"
     >
       <Box style={{ display: "flex", alignItems: "center" }}>
         <Box style={{ display: "flex", alignItems: "center " }}>
@@ -44,7 +44,7 @@ export default function Navbar({ isTransparent, isLandingPage }) {
             Login
           </Button>
         </Link>
-        <Link to="/cadastro">
+        <Link to="/register">
           <Button variant="solid" colorScheme="blue">
             Register
           </Button>
