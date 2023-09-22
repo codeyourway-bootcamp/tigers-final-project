@@ -62,23 +62,28 @@ export default function Form(props) {
           </FormControl>
         </>
       ) : null}
-
-      <FormControl>
-        <FormLabel>Email</FormLabel>
-        <Input
-          type="text"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-      </FormControl>
-      <FormControl>
-        <FormLabel>Password</FormLabel>
-        <Input
-          type="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
-      </FormControl>
+{props.isLogin ? (
+        <>
+          {" "}
+          <FormControl>
+            <FormLabel>Email</FormLabel>
+            <Input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+          </FormControl>
+          <FormControl>
+            <FormLabel>Senha</FormLabel>
+            <Input
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+          </FormControl>
+        </>
+      ) : null}
+      
       {
         (props.isRegister ? (
           <Button
