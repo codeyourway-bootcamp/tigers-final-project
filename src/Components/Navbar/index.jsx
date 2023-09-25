@@ -30,7 +30,7 @@ export default function Navbar({ isTransparent, isLandingPage }) {
       position={navbarStyle.position}
       width="100%"
       top="0"
-      zIndex="1000"
+      zIndex="1"
     >
       <Box style={{ display: "flex", alignItems: "center" }}>
         <Box style={{ display: "flex", alignItems: "center " }}>
