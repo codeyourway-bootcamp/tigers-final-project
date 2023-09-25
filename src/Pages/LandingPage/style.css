@@ -1,15 +1,29 @@
-.expanding-image {
-  animation: expand 2s infinite;
+.list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 20px;
 }
 
-@keyframes expand {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.2);
-  }
-  100% {
-    transform: scale(1);
-  }
+.list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+
+.numberStyle {
+  font-size: 32px;
+  margin-right: 10px;
+  color: #fff;
+  background-color: #319795;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+.sec2 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
