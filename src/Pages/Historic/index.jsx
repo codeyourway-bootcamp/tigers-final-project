@@ -1,13 +1,13 @@
 import Navbar from "../../Components/Navbar";
 import HistoricList from "../../Components/HistoricList";
-import BottomNavigate from "../../Components/BottonNavigate";
+import BottomNavigate from "../../Components/BottomNavigate";
 import PageContainer from "../../Components/PageContainer";
+import Footer from "../../Components/Footer";
 function Historic() {
   return (
     <div>
       <Navbar isTransparent={false} isLandingPage={false} />
       <PageContainer>
-        <h1>Historic</h1>
         <HistoricList />
         <BottomNavigate />
       </PageContainer>

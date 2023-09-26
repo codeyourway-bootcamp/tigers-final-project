@@ -1,14 +1,14 @@
-import BottomNavigate from "../../Components/BottonNavigate";
-import Form from "../../Components/Form";
 import Navbar from "../../Components/Navbar";
+import Form from "../../Components/Form";
 import PageContainer from "../../Components/PageContainer";
+import Footer from "../../Components/Footer";
 function Login() {
   return (
-    <div style={{ display: "flex" }}>
+    <div>
       <Navbar isTransparent={false} isLandingPage={false} />
       <PageContainer>
         <Form />
-        <BottomNavigate />
+        <Footer simple={true} />
       </PageContainer>
     </div>
   );

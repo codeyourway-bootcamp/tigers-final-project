@@ -1,5 +1,5 @@
 import Navbar from "../../Components/Navbar";
-import BottonNavigate from "../../Components/BottonNavigate";
+import BottonNavigate from "../../Components/BottomNavigate";
 import PageContainer from "../../Components/PageContainer";
 
 function Charts() {

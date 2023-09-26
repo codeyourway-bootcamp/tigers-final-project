@@ -44,7 +44,7 @@ export default function Navbar({ isTransparent, isLandingPage }) {
             Login
           </Button>
         </Link>
-        <Link to="/cadastro">
+        <Link to="/register">
           <Button variant="solid" colorScheme="blue">
             Register
           </Button>
