@@ -3,6 +3,7 @@ import HistoricList from "../../Components/HistoricList";
 import "./style.css";
 import BottomNavigate from "../../Components/BottomNavigate";
 import PageContainer from "../../Components/PageContainer";
+import Footer from "../../Components/Footer";
 
 function Dashboard() {
   return (
@@ -12,6 +13,7 @@ function Dashboard() {
         <HistoricList />
         <BottomNavigate />
       </PageContainer>
+      <Footer />
     </div>
   );
 }
