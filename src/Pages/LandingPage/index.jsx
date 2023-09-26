@@ -2,6 +2,7 @@ import { Box, Button } from "@chakra-ui/react";
 import Navbar from "../../Components/Navbar";
 import PageContainer from "../../Components/PageContainer";
 import "./style.css";
+import Footer from "../../Components/Footer";
 
 export default function LandingPage() {
   return (
@@ -146,6 +147,7 @@ export default function LandingPage() {
           </Box>
         </PageContainer>
       </Box>
+
     </div>
   );
 }
