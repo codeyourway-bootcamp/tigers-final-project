@@ -13,7 +13,7 @@ const steps = [
     })
   
     return (
-        <div style={{borderWidth:"3px", margin:"20px", padding:"20px", borderRadius: "15px"}}> 
+        <div style={{borderWidth:"3px", margin:"20px", padding:"20px", borderRadius: "15px", minWidth:"45%"}}> 
       <Stepper index={activeStep} orientation='vertical' height='400px' gap='0'>
         {steps.map((step, index) => (
           <Step key={index}>
