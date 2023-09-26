@@ -35,7 +35,7 @@ export default function Navbar({ isTransparent, isLandingPage }) {
       <Box style={{ display: "flex", alignItems: "center" }}>
         <Box style={{ display: "flex", alignItems: "center " }}>
           <BiSolidBarChartSquare size={55} color="rgba(66, 153, 225, 1)" />
-          <h1> MoneyMinder</h1>
+          <h1 style={{ color: "black" }}> MoneyMinder</h1>
         </Box>
       </Box>
       <Box>

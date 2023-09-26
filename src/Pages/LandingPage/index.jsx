@@ -3,6 +3,7 @@ import Navbar from "../../Components/Navbar";
 import PageContainer from "../../Components/PageContainer";
 import "./style.css";
 import Footer from "../../Components/Footer";
+import { Link } from "react-router-dom";
 
 export default function LandingPage() {
   return (
@@ -19,7 +20,7 @@ export default function LandingPage() {
         alignItems="center"
         textAlign="center"
         color="white"
-        textShadow="0px 4px 10px rgba(0, 0, 0, 0.5)"
+        textShadow="0px 4px 8px rgba(0, 0, 0, 0.5)"
       >
         <Navbar isTransparent={true} isLandingPage={true} />
         <PageContainer>
@@ -31,7 +32,7 @@ export default function LandingPage() {
               marginTop: "10px",
               marginBottom: "30px",
               fontSize: "18px",
-              color: "gray",
+              color: "black",
               background: "rgba(255, 255, 255, 0.5)",
               borderRadius: "5px",
             }}
@@ -50,6 +51,7 @@ export default function LandingPage() {
               fontWeight: "bold",
               marginBottom: "60px",
               textAlign: "center",
+              color: "gray",
             }}
           >
             O guia para o seu sucesso financeiro
@@ -99,6 +101,7 @@ export default function LandingPage() {
                 style={{
                   fontSize: "14px",
                   textAlign: "left",
+                  alignItems: "flex-start",
                 }}
               >
                 Organize suas finanças
@@ -106,8 +109,9 @@ export default function LandingPage() {
               <p
                 style={{
                   fontWeight: "bold",
-                  fontSize: "32px",
+                  fontSize: "38px",
                   textAlign: "left",
+                  color: "gray",
                 }}
               >
                 O que você precisa esta aqui!
@@ -120,7 +124,7 @@ export default function LandingPage() {
                   textAlign: "left",
                 }}
               >
-                <li>Receba um panorama completo das suas finanças.</li>
+                <li>Obtenha um panorama completo das suas finanças.</li>
                 <li>Categorize suas despesas e receitas de forma simples.</li>
                 <li>
                   Planeje metas financeiras realistas e alcance-as mais
@@ -128,9 +132,17 @@ export default function LandingPage() {
                 </li>
                 <li>Acompanhe seus investimentos e patrimônio líquido.</li>
               </ul>
-              <Button colorScheme="teal" mt="10px" as="a" href="/sobre">
-                Ver mais
-              </Button>
+
+              <Link to="/register">
+                <Box
+                  mt="10px"
+                  display="flex"
+                  justifyContent="flex-start"
+                  marginTop="40px"
+                >
+                  <Button colorScheme="teal">Register</Button>
+                </Box>
+              </Link>
             </Box>
             <Box>
               <img
@@ -146,11 +158,8 @@ export default function LandingPage() {
             </Box>
           </Box>
         </PageContainer>
+        <Footer />
       </Box>
-
-      <Button colorScheme="teal" mt="10px" as="a" href="/sobre">
-        Ver mais
-      </Button>
     </div>
   );
 }

@@ -11,6 +11,7 @@ function Historic() {
         <HistoricList />
         <BottomNavigate />
       </PageContainer>
+      <Footer />
     </div>
   );
 }
