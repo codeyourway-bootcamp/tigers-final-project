@@ -3,6 +3,7 @@ import Navbar from "../../Components/Navbar";
 import PageContainer from "../../Components/PageContainer";
 import "./style.css";
 import Footer from "../../Components/Footer";
+import { Link } from "react-router-dom";
 
 export default function LandingPage() {
   return (
@@ -19,7 +20,7 @@ export default function LandingPage() {
         alignItems="center"
         textAlign="center"
         color="white"
-        textShadow="0px 4px 10px rgba(0, 0, 0, 0.5)"
+        textShadow="0px 4px 8px rgba(0, 0, 0, 0.5)"
       >
         <Navbar isTransparent={true} isLandingPage={true} />
         <PageContainer>
@@ -31,8 +32,8 @@ export default function LandingPage() {
               marginTop: "10px",
               marginBottom: "30px",
               fontSize: "18px",
-              color: "bgray",
-              background: "rgba(255, 255, 255, 0.8)",
+              color: "black",
+              background: "rgba(255, 255, 255, 0.5)",
               borderRadius: "5px",
             }}
           >
@@ -42,15 +43,15 @@ export default function LandingPage() {
         </PageContainer>
       </Box>
 
-      {/* Nova seção para a lista */}
       <Box bg="white" padding="40px 20px">
         <PageContainer>
           <h2
             style={{
               fontSize: "42px",
               fontWeight: "bold",
-              marginBottom: "45px",
+              marginBottom: "60px",
               textAlign: "center",
+              color: "gray",
             }}
           >
             O guia para o seu sucesso financeiro
@@ -75,6 +76,15 @@ export default function LandingPage() {
               financeiros com confiança.
             </li>
           </ul>
+          <Box
+            style={{
+              width: "100%",
+              height: "0.1px",
+              backgroundColor: "gray",
+              // boxShadow: "0px -5px 10px rgba(0, 0, 0, 5)", // Sombra projetada para cima
+              marginTop: "60px",
+            }}
+          ></Box>
         </PageContainer>
       </Box>
 
@@ -87,22 +97,34 @@ export default function LandingPage() {
         <PageContainer>
           <Box className="sec2">
             <Box>
-              {" "}
               <h2
                 style={{
-                  fontSize: "24px",
-                  fontWeight: "bold",
-                  marginBottom: "20px",
+                  fontSize: "14px",
+                  textAlign: "left",
+                  alignItems: "flex-start",
                 }}
               >
-                O que nossa aplicação oferece
+                Organize suas finanças
               </h2>
-              <p>
-                Aqui estão alguns dos recursos que você pode aproveitar com
-                nossa aplicação:
+              <p
+                style={{
+                  fontWeight: "bold",
+                  fontSize: "38px",
+                  textAlign: "left",
+                  color: "gray",
+                }}
+              >
+                O que você precisa esta aqui!
               </p>
-              <ul style={{ listStyleType: "none", paddingLeft: "20px" }}>
-                <li>Receba um panorama completo das suas finanças.</li>
+              <ul
+                className="list2"
+                style={{
+                  listStyleType: "circle",
+                  paddingLeft: "20px",
+                  textAlign: "left",
+                }}
+              >
+                <li>Obtenha um panorama completo das suas finanças.</li>
                 <li>Categorize suas despesas e receitas de forma simples.</li>
                 <li>
                   Planeje metas financeiras realistas e alcance-as mais
@@ -110,29 +132,34 @@ export default function LandingPage() {
                 </li>
                 <li>Acompanhe seus investimentos e patrimônio líquido.</li>
               </ul>
+
+              <Link to="/register">
+                <Box
+                  mt="10px"
+                  display="flex"
+                  justifyContent="flex-start"
+                  marginTop="40px"
+                >
+                  <Button colorScheme="teal">Register</Button>
+                </Box>
+              </Link>
             </Box>
             <Box>
               <img
                 src="/pc.jpg"
                 alt="Imagem de um computador"
-                style={{ width: "500px", height: "auto" }}
+                style={{
+                  width: "500px",
+                  height: "auto",
+                  borderRadius: "10px",
+                  boxShadow: "5px 5px 10px rgba(0, 0, 0, 5)",
+                }}
               />
             </Box>
           </Box>
         </PageContainer>
+        <Footer />
       </Box>
-
-      <Footer>
-        <Button colorScheme="teal" mt="10px" as="a" href="/sobre">
-          Ver mais
-        </Button>
-        <Button colorScheme="teal" mt="10px" as="a" href="/login">
-          Login
-        </Button>
-        <Button colorScheme="teal" mt="10px" as="a" href="/register">
-          Register
-        </Button>
-      </Footer>
     </div>
   );
 }

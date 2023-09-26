@@ -25,5 +25,10 @@
 .sec2 {
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  align-items: flex-start;
+  margin-bottom: 60px;
+}
+
+.list2 li {
+  margin-bottom: 10px;
 }
