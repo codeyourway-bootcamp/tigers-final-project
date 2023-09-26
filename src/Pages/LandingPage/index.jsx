@@ -30,8 +30,8 @@ export default function LandingPage() {
               marginTop: "10px",
               marginBottom: "30px",
               fontSize: "18px",
-              color: "bgray",
-              background: "rgba(255, 255, 255, 0.8)",
+              color: "gray",
+              background: "rgba(255, 255, 255, 0.5)",
               borderRadius: "5px",
             }}
           >
@@ -41,14 +41,13 @@ export default function LandingPage() {
         </PageContainer>
       </Box>
 
-      {/* Nova seção para a lista */}
       <Box bg="white" padding="40px 20px">
         <PageContainer>
           <h2
             style={{
               fontSize: "42px",
               fontWeight: "bold",
-              marginBottom: "45px",
+              marginBottom: "60px",
               textAlign: "center",
             }}
           >
@@ -74,6 +73,15 @@ export default function LandingPage() {
               financeiros com confiança.
             </li>
           </ul>
+          <Box
+            style={{
+              width: "100%",
+              height: "0.1px",
+              backgroundColor: "gray",
+              // boxShadow: "0px -5px 10px rgba(0, 0, 0, 5)", // Sombra projetada para cima
+              marginTop: "60px",
+            }}
+          ></Box>
         </PageContainer>
       </Box>
 
@@ -86,21 +94,31 @@ export default function LandingPage() {
         <PageContainer>
           <Box className="sec2">
             <Box>
-              {" "}
               <h2
                 style={{
-                  fontSize: "24px",
-                  fontWeight: "bold",
-                  marginBottom: "20px",
+                  fontSize: "14px",
+                  textAlign: "left",
                 }}
               >
-                O que nossa aplicação oferece
+                Organize suas finanças
               </h2>
-              <p>
-                Aqui estão alguns dos recursos que você pode aproveitar com
-                nossa aplicação:
+              <p
+                style={{
+                  fontWeight: "bold",
+                  fontSize: "32px",
+                  textAlign: "left",
+                }}
+              >
+                O que você precisa esta aqui!
               </p>
-              <ul style={{ listStyleType: "none", paddingLeft: "20px" }}>
+              <ul
+                className="list2"
+                style={{
+                  listStyleType: "circle",
+                  paddingLeft: "20px",
+                  textAlign: "left",
+                }}
+              >
                 <li>Receba um panorama completo das suas finanças.</li>
                 <li>Categorize suas despesas e receitas de forma simples.</li>
                 <li>
@@ -109,21 +127,25 @@ export default function LandingPage() {
                 </li>
                 <li>Acompanhe seus investimentos e patrimônio líquido.</li>
               </ul>
+              <Button colorScheme="teal" mt="10px" as="a" href="/sobre">
+                Ver mais
+              </Button>
             </Box>
             <Box>
               <img
                 src="/pc.jpg"
                 alt="Imagem de um computador"
-                style={{ width: "500px", height: "auto" }}
+                style={{
+                  width: "500px",
+                  height: "auto",
+                  borderRadius: "10px",
+                  boxShadow: "5px 5px 10px rgba(0, 0, 0, 5)",
+                }}
               />
             </Box>
           </Box>
         </PageContainer>
       </Box>
-
-      <Button colorScheme="teal" mt="10px" as="a" href="/sobre">
-        Ver mais
-      </Button>
     </div>
   );
 }
