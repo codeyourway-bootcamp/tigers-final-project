@@ -1,20 +1,47 @@
 import Form from "../../Components/Form";
-import Navbar from "../../Components/Navbar";
-import PageContainer from "../../Components/PageContainer";
-import { Container } from "@chakra-ui/react";
 import Footer from "../../Components/Footer";
+import { BiSolidBarChartSquare } from "react-icons/bi";
+import { Box } from "@chakra-ui/react";
+import "./style.css";
 
 function Register() {
   return (
     <div>
-      <Navbar isTransparent={false} isLandingPage={false} />
-      <PageContainer>
-        <Container>
-          <h1 style={{ textAlign: "center" }}>Register</h1>
-          <Form isRegister={true} />
-        </Container>
-        <Footer simple={true} />
-      </PageContainer>
+      <Box className="stripe"></Box>{" "}
+      {/* Faixa que se estende pela largura da página */}
+      <Box className="container">
+        <Box
+          style={{
+            display: "flex",
+            alignItems: "center ",
+            marginTop: "150px",
+            marginBottom: "10px",
+            zIndex: "2",
+          }}
+        >
+          <BiSolidBarChartSquare size={55} color="rgba(66, 153, 225, 1)" />
+          <h1 style={{ color: "black" }}> MoneyMinder</h1>
+        </Box>
+        <Box className="content">
+          <Box className="register-box">
+            <h1>Register</h1>
+            <Form isRegister={true} />
+            <p
+              style={{
+                fontSize: "14px",
+                fontWeight: "normal",
+                marginTop: "20px",
+              }}
+            >
+              Já possui conta?
+              <a style={{ color: "blue" }} href="/login">
+                Entrar!
+              </a>
+            </p>
+          </Box>
+        </Box>
+      </Box>
+      <Footer simple={true} />
     </div>
   );
 }
