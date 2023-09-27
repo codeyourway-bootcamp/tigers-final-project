@@ -3,7 +3,9 @@ import HistoricList from "../../Components/HistoricList";
 import "./style.css";
 import BottomNavigate from "../../Components/BottomNavigate";
 import PageContainer from "../../Components/PageContainer";
+import Footer from "../../Components/Footer";
 import ExpenseBarChart from "../../Components/Charts/ExpensesBarChart";
+
 function Dashboard() {
   return (
     <div>
@@ -13,6 +15,7 @@ function Dashboard() {
         <ExpenseBarChart/>
         <BottomNavigate />
       </PageContainer>
+      <Footer />
     </div>
   );
 }

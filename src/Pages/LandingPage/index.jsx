@@ -158,7 +158,15 @@ export default function LandingPage() {
             </Box>
           </Box>
         </PageContainer>
-        <Footer />
+
+        <Footer>
+          <Button colorScheme="teal" mt="10px" as="a" href="/login">
+            Login
+          </Button>
+          <Button colorScheme="teal" mt="10px" as="a" href="/register">
+            Register
+          </Button>
+        </Footer>
       </Box>
     </div>
   );

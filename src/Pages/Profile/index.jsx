@@ -1,6 +1,7 @@
 import BottomNavigate from "../../Components/BottomNavigate";
 import Navbar from "../../Components/Navbar";
 import PageContainer from "../../Components/PageContainer";
+import Footer from "../../Components/Footer";
 function Profile() {
   return (
     <div>
@@ -8,6 +9,7 @@ function Profile() {
       <PageContainer>
         <h1>Profile</h1>
         <BottomNavigate />
+        <Footer simple={true} />
       </PageContainer>
     </div>
   );

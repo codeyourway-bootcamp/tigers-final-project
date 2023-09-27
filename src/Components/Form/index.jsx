@@ -86,6 +86,9 @@ export default function Form(props) {
         {props.isRegister ? (
           <Button
             marginY={"3"}
+            variant="solid"
+            colorScheme="blue"
+            mr={4}
             onClick={() => {
               console.log("Clicou no botão", sobrenome, name, password, email);
               Registro();
@@ -96,6 +99,8 @@ export default function Form(props) {
         ) : (
           <Button
             marginY={"3"}
+            variant="solid"
+            colorScheme="blue"
             onClick={() => {
               console.log("Clicou no botão", sobrenome, name, password, email);
               Login();
