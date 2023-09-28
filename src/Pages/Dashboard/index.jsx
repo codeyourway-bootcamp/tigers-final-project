@@ -11,12 +11,13 @@ function Dashboard() {
   return (
     <div>
       <Navbar isTransparent={false} isLandingPage={false} />
-      <PageContainer format={"column"}> 
+
+      <PageContainer format={"column"}>
         <HistoricList />
-        <ExpenseBarChart/>
+        <ExpenseBarChart />
         <BottomNavigate />
       </PageContainer>
-      <Footer />
+      <Footer simple={true} />
     </div>
   );
 }

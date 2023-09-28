@@ -2,6 +2,8 @@ import { Box, Button } from "@chakra-ui/react";
 import { Link, useLocation } from "react-router-dom";
 import PropTypes from "prop-types";
 import { BiSolidBarChartSquare } from "react-icons/bi";
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Navbar({ isTransparent, isLandingPage }) {
   const location = useLocation();
@@ -17,7 +19,15 @@ export default function Navbar({ isTransparent, isLandingPage }) {
         : "0 2px 4px rgba(0, 0, 0, 0.05)",
     position: isLandingPage && location.pathname === "/" ? "absolute" : "fixed", // Ajuste na lógica
   };
-
+  const navigate = useNavigate();
+  const [showAuth, setShowAuth] = useState(true);
+  useEffect(() => {
+    const user = localStorage.getItem("app@user");
+    if (user) {
+      setShowAuth(false);
+      // navigate("/dashboard");
+    }
+  }, []);
   return (
     <Box
       bg={navbarStyle.bg} // Aplicando a propriedade de fundo
@@ -38,18 +48,33 @@ export default function Navbar({ isTransparent, isLandingPage }) {
           <h1 style={{ color: "black" }}> MoneyMinder</h1>
         </Box>
       </Box>
-      <Box>
-        <Link to="/login">
-          <Button variant="outline" colorScheme="blue" mr={4}>
-            Login
+      {showAuth ? (
+        <Box>
+          <Link to="/login">
+            <Button variant="outline" colorScheme="blue" mr={4}>
+              Login
+            </Button>
+          </Link>
+          <Link to="/register">
+            <Button variant="solid" colorScheme="blue">
+              Register
+            </Button>
+          </Link>
+        </Box>
+      ) : (
+        <Box>
+          <Button
+            onClick={() => {
+              localStorage.clear();
+              navigate("/login");
+            }}
+            variant="solid"
+            colorScheme="blue"
+          >
+            Sair
           </Button>
-        </Link>
-        <Link to="/register">
-          <Button variant="solid" colorScheme="blue">
-            Register
-          </Button>
-        </Link>
-      </Box>
+        </Box>
+      )}
     </Box>
   );
 }

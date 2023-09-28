@@ -9,17 +9,20 @@ import {
 } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import PageContainer from "../PageContainer";
+import { useNavigate } from "react-router-dom";
+
 export default function Form(props) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
   const [sobrenome, setSobrenome] = useState("");
+  const navigate = useNavigate();
 
   // esse hook é executado na montagem do componente.
   useEffect(() => {
     const user = localStorage.getItem("app@user");
     if (user) {
-      alert("Usuário já logado");
+      navigate("/dashboard");
       //user a funcao do react router dom para mandar o user para pagina de dashboard
       // useHistory().push("/dashboard")
     }
@@ -30,9 +33,8 @@ export default function Form(props) {
       users.data.map((user) => {
         console.log(user.user_email, user.user_password, email, password);
         if (user.user_email === email && user.user_password === password) {
-          alert("Login efetuado com sucesso");
           localStorage.setItem("app@user", JSON.stringify(user.user_email));
-          // useHistory().push("/dashboard")
+          navigate("/dashboard");
         }
       });
     });
