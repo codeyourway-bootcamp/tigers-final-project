@@ -13,6 +13,7 @@ function Profile() {
       <PageContainer>
         <h1>Profile</h1>
         <BottomNavigate />
+        <Footer simple={true} />
       </PageContainer>
       
       <>
