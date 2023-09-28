@@ -3,6 +3,7 @@ import CardProfile from "../../Components/CardProfile";
 import Navbar from "../../Components/Navbar";
 import PageContainer from "../../Components/PageContainer";
 import { Card, CardHeader, CardBody, CardFooter } from '@chakra-ui/react';
+import Footer from "../../Components/Footer";
 
 function Profile() {
   return (
@@ -13,6 +14,7 @@ function Profile() {
       <PageContainer>
         <h1>Profile</h1>
         <BottomNavigate />
+        <Footer simple={true} />
       </PageContainer>
       
       <>

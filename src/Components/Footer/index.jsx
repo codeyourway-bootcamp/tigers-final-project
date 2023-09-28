@@ -1,6 +1,7 @@
 import "./style.css";
 
-export default function Footer({ simple,children }) {
+// eslint-disable-next-line react/prop-types
+export default function Footer({ simple, children }) {
   if (simple) {
     return (
       <div className="footer-component-simple">
