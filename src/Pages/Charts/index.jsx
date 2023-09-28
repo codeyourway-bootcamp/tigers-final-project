@@ -8,6 +8,7 @@ function Charts() {
     <div>
       <Navbar isTransparent={false} isLandingPage={false} />
       <PageContainer>
+      <ExpenseBarChart />
         <h1>Charts</h1>
         <ExpenseBarChart />
         <BottonNavigate />
