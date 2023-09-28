@@ -5,6 +5,7 @@ import BottomNavigate from "../../Components/BottomNavigate";
 import PageContainer from "../../Components/PageContainer";
 import Footer from "../../Components/Footer";
 import ExpenseBarChart from "../../Components/Charts/ExpensesBarChart";
+import BottonExpenses from "../../Components/BottonExpenses";
 
 function Dashboard() {
   return (
