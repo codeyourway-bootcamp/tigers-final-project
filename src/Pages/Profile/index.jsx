@@ -4,7 +4,7 @@ import Navbar from "../../Components/Navbar";
 import PageContainer from "../../Components/PageContainer";
 import Footer from "../../Components/Footer";
 import { Card, CardHeader, CardBody, CardFooter } from '@chakra-ui/react';
-import Footer from "../../Components/Footer";
+
 
 function Profile() {
   return (
