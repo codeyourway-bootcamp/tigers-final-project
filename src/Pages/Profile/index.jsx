@@ -2,6 +2,7 @@ import BottomNavigate from "../../Components/BottomNavigate";
 import CardProfile from "../../Components/CardProfile";
 import Navbar from "../../Components/Navbar";
 import PageContainer from "../../Components/PageContainer";
+import Footer from "../../Components/Footer";
 import { Card, CardHeader, CardBody, CardFooter } from '@chakra-ui/react';
 
 function Profile() {

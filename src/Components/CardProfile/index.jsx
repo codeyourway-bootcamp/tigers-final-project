@@ -5,9 +5,6 @@ import {
   Card,
   CardHeader,
   CardBody,
-  CardFooter,
-  Divider,
-  flexbox,
   Heading,
   Stack,
   StackDivider,
@@ -53,7 +50,7 @@ function CardProfile() {
               Nome
             </Heading>
             <Text pt="2" fontSize="sm">
-              {userData.user_first_name}
+              {userData?.user_first_name}
             </Text>
           </Box>
           <Box>
@@ -61,7 +58,7 @@ function CardProfile() {
               Email
             </Heading>
             <Text pt="2" fontSize="sm">
-              {userData.user_email}
+              {userData?.user_email}
             </Text>
           </Box>
         </Stack>
