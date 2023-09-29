@@ -1,0 +1,12 @@
+/*<Stack spacing='4'>
+  {['elevated', 'outline', 'filled', 'unstyled'].map((variant) => (
+    <Card key={variant} variant={variant}>
+      <CardHeader>
+        <Heading size='md'> {variant}</Heading>
+      </CardHeader>
+      <CardBody>
+        <Text>variant = {variant}</Text>
+      </CardBody>
+    </Card>
+  ))}
+</Stack>
