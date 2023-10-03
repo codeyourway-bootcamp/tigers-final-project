@@ -1,0 +1,130 @@
+.box-balances {
+  display: flex;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: white;
+  width: 100%;
+  height: 170px;
+  margin: 100px 0px 0px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.box-balances-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 80%;
+}
+
+.wellcome {
+}
+
+.values {
+  display: flex;
+  height: 50px;
+  justify-content: space-between;
+  margin-left: 0;
+}
+
+.box-saldo {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  height: 50px;
+  width: 200px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+.box-rendimento {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  height: 50px;
+  width: 200px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+.box-despesas {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  height: 50px;
+  width: 200px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+.ver-relatorios {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 200px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+.box-divider {
+  width: 1px;
+  height: 100%;
+  background-color: rgb(228, 228, 228);
+  margin: 0 15px;
+}
+
+.box-balances-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 300px;
+}
+
+.operations {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.add-rendimento {
+  display: flex;
+  flex-direction: column;
+  width: 95px;
+  height: 95px;
+  border-radius: 10px;
+  border: 1px solid rgb(232, 232, 232);
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 12px;
+  text-align: center;
+  transition: transform 0.2s ease-out;
+}
+
+.add-rendimento:hover {
+  transform: scale(1.1);
+}
+
+.add-despesas {
+  display: flex;
+  flex-direction: column;
+  width: 95px;
+  height: 95px;
+  border-radius: 10px;
+  border: 1px solid rgb(232, 232, 232);
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 12px;
+  text-align: center;
+  transition: transform 0.2s ease-out;
+}
+
+.add-despesas:hover {
+  transform: scale(1.1);
+}

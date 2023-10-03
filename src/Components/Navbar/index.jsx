@@ -17,7 +17,7 @@ export default function Navbar({ isTransparent, isLandingPage }) {
       isTransparent && location.pathname === "/"
         ? "0 2px 4px rgba(0, 0, 0, 0.2)"
         : "0 2px 4px rgba(0, 0, 0, 0.05)",
-    position: isLandingPage && location.pathname === "/" ? "absolute" : "fixed", // Ajuste na lógica
+    position: isLandingPage && location.pathname === "/" ? "absolute" : "fixed",
   };
   const navigate = useNavigate();
   const [showAuth, setShowAuth] = useState(true);
@@ -30,8 +30,8 @@ export default function Navbar({ isTransparent, isLandingPage }) {
   }, []);
   return (
     <Box
-      bg={navbarStyle.bg} // Aplicando a propriedade de fundo
-      boxShadow={navbarStyle.boxShadow} // Aplicando a propriedade de sombra
+      bg={navbarStyle.bg}
+      boxShadow={navbarStyle.boxShadow}
       py={3}
       px={6}
       display="flex"
@@ -41,6 +41,7 @@ export default function Navbar({ isTransparent, isLandingPage }) {
       width="100%"
       top="0"
       zIndex="1"
+      margin={"0"}
     >
       <Box style={{ display: "flex", alignItems: "center" }}>
         <Box style={{ display: "flex", alignItems: "center " }}>
