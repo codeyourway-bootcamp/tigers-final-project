@@ -7,9 +7,8 @@ import "./style.css";
 function Register() {
   return (
     <div>
-      <Box className="stripe"></Box>{" "}
-      {/* Faixa que se estende pela largura da página */}
-      <Box className="container">
+      <Box className="register-stripe"></Box>{" "}
+      <Box className="register-container">
         <Box
           style={{
             display: "flex",
@@ -22,7 +21,7 @@ function Register() {
           <BiSolidBarChartSquare size={55} color="rgba(66, 153, 225, 1)" />
           <h1 style={{ color: "black" }}> MoneyMinder</h1>
         </Box>
-        <Box className="content">
+        <Box className="register-content">
           <Box className="register-box">
             <h1>Register</h1>
             <Form isRegister={true} />

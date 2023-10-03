@@ -32,3 +32,19 @@
 .list2 li {
   margin-bottom: 10px;
 }
+
+.first-box {
+  margin-top: 50px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.first-box-left {
+  margin-left: 35px;
+}
+.first-box-right {
+  margin-right: 20px;
+  margin-left: 50px;
+}

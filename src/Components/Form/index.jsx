@@ -51,7 +51,7 @@ export default function Form(props) {
           <>
             {" "}
             <FormControl>
-              <FormLabel>Nome</FormLabel>
+              <FormLabel>Nome </FormLabel>
               <Input
                 type="text"
                 value={name}

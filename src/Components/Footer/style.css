@@ -1,5 +1,5 @@
 .footer-component-simple {
-  position: fixed;
+  position: absolute;
   bottom: 10px;
   left: 40%;
   text-align: center;
