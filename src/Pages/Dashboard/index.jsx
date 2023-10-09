@@ -9,8 +9,8 @@ import { Box } from "@chakra-ui/react";
 
 function Dashboard() {
   const pageStyles = {
-    backgroundColor: "rgba(238, 237, 237, 0.5)", // Define o background com a cor desejada
-    minHeight: "100vh", // Garante que a cor de fundo cubra toda a altura da tela
+    backgroundColor: "rgba(238, 237, 237, 0.5)",
+    minHeight: "100vh",
   };
 
   const styleH2 = {

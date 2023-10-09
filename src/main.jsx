@@ -16,31 +16,31 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       <RouterProvider
         router={createBrowserRouter([
           {
-            path: "/",
+            path: "/tigers-final-project",
             element: <LandingPage />,
           },
           {
-            path: "/login",
+            path: "/tigers-final-project/login",
             element: <Login />,
           },
           {
-            path: "/register",
+            path: "/tigers-final-project/register",
             element: <Register />,
           },
           {
-            path: "/dashboard",
+            path: "/tigers-final-project/dashboard",
             element: <Dashboard />,
           },
           {
-            path: "/charts",
+            path: "/tigers-final-project/charts",
             element: <Charts />,
           },
           {
-            path: "/historic",
+            path: "/tigers-final-project/historic",
             element: <Historic />,
           },
           {
-            path: "/profile",
+            path: "/tigers-final-project/profile",
             element: <Profile />,
           },
         ])}

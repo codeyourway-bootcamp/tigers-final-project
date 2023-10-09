@@ -6,6 +6,7 @@ import {
   FormLabel,
   Input,
   Button,
+  Box,
 } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import PageContainer from "../PageContainer";
@@ -48,25 +49,29 @@ export default function Form(props) {
     <PageContainer>
       <Container>
         {props.isRegister ? (
-          <>
+          <Box style={{ display: "flex" }}>
             {" "}
             <FormControl>
-              <FormLabel>Nome </FormLabel>
-              <Input
-                type="text"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-              />
+              <Box style={{ marginRight: "3px" }}>
+                <FormLabel>Nome </FormLabel>
+                <Input
+                  type="text"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                />
+              </Box>
             </FormControl>
             <FormControl>
-              <FormLabel>Sobrenome</FormLabel>
-              <Input
-                type="text"
-                value={sobrenome}
-                onChange={(e) => setSobrenome(e.target.value)}
-              />
+              <Box>
+                <FormLabel>Sobrenome</FormLabel>
+                <Input
+                  type="text"
+                  value={sobrenome}
+                  onChange={(e) => setSobrenome(e.target.value)}
+                />
+              </Box>
             </FormControl>
-          </>
+          </Box>
         ) : null}
 
         <FormControl>
