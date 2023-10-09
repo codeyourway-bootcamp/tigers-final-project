@@ -22,10 +22,9 @@ function Historic() {
       <Box style={pageStyles}>
         <Navbar isTransparent={false} isLandingPage={false} />
         <Box className="historic-container">
-          <Box className="">
-            <BalanceTracker />
-          </Box>
+          <Box className="balancetr-box"></Box>
           <Box className="historic-content">
+            <BalanceTracker />
             <h2 style={styleH2}>Histórico</h2>
             <HistoricList />
             <BottomNavigate />

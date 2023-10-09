@@ -22,3 +22,7 @@ body {
   width: 100%;
   justify-content: space-around;
 }
+
+.balancetr-box {
+  margin-right: 50px;
+}
