@@ -25,7 +25,7 @@ export default function Navbar({ isTransparent, isLandingPage }) {
     const user = localStorage.getItem("app@user");
     if (user) {
       setShowAuth(false);
-      // navigate("/dashboard");
+      if (location.pathname === "/") navigate("/dashboard");
     }
   }, []);
   return (

@@ -34,7 +34,7 @@ export default function Form(props) {
       users.data.map((user) => {
         console.log(user.user_email, user.user_password, email, password);
         if (user.user_email === email && user.user_password === password) {
-          localStorage.setItem("app@user", JSON.stringify(user.user_email));
+          localStorage.setItem("app@user", JSON.stringify(user));
           navigate("/dashboard");
         }
       });

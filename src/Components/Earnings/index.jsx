@@ -13,14 +13,14 @@ import {
   Box,
 } from "@chakra-ui/react";
 
-function Earnings() {
+function Earnings({ setTransactions, transactions }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [type, setType] = useState("");
   const [value, setValue] = useState(0);
   const [description, setDescription] = useState("");
   const [date, setDate] = useState("");
   const [category, setCategory] = useState("");
-  const [transactions, setTransactions] = useState([]);
+
   const reset = () => {
     setType("");
     setValue(0);
@@ -29,11 +29,7 @@ function Earnings() {
     setCategory("");
     setTransactions([]);
   };
-  useEffect(() => {
-    const recordedTransactions =
-      JSON.parse(localStorage.getItem("transactions")) || [];
-    setTransactions(recordedTransactions);
-  }, []);
+
   return (
     <>
       <Box className="add-rendimento">
@@ -94,7 +90,7 @@ function Earnings() {
           <ModalHeader>Adicionar {type}</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
-            <form>
+            <form className="modal-container">
               <div className="form-group">
                 <label>Valor</label>
                 <div className="">
@@ -153,24 +149,24 @@ function Earnings() {
             </Button>
             <Button
               onClick={() => {
+                const newTransaction = {
+                  value,
+                  description,
+                  date,
+                  category,
+                  type,
+                };
                 console.log(transactions);
-                setTransactions([
-                  ...transactions,
-                  {
-                    value,
-                    description,
-                    date,
-                    category,
-                    type,
-                  },
-                ]);
+                setTransactions([...transactions, newTransaction]);
                 localStorage.setItem(
                   "transactions",
-                  JSON.stringify(transactions)
+                  JSON.stringify([...transactions, newTransaction])
                 );
+
                 alert(`${type} adicionado com sucesso!`);
                 reset();
                 onClose();
+                window.location.reload();
               }}
               variant="ghost"
             >
