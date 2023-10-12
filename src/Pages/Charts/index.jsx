@@ -5,6 +5,7 @@ import Footer from "../../Components/Footer";
 import BalanceTracker from "../../Components/BottonExpenses";
 import { Box } from "@chakra-ui/react";
 import ExpenseBarChart from "../../Components/Charts/ExpensesBarChart";
+import { ChartPie } from "../../Components/ChartPie";
 
 function Charts() {
   const pageStyles = {
@@ -18,6 +19,7 @@ function Charts() {
     fontSize: "24px",
     paddingLeft: "20px",
     marginTop: "20px",
+    marginLeft: "20px",
   };
 
   return (
@@ -27,8 +29,13 @@ function Charts() {
         <BalanceTracker />
         <Box className="charts-content">
           <h2 style={styleH2}>Gráficos</h2>
-          <Box className="Box-charts">
-            <ExpenseBarChart />
+          <Box className="box-charts">
+            <Box className="box-expenser">
+              <ExpenseBarChart />
+            </Box>
+            <Box className="box-chartpie">
+              <ChartPie />
+            </Box>
           </Box>
           <BottomNavigate />
         </Box>
