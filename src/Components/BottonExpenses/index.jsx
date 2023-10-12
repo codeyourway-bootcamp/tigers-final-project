@@ -4,6 +4,7 @@ import { AiOutlineStock } from "react-icons/ai";
 import { Earnings } from "../../Components/Earnings";
 import { Link } from "react-router-dom";
 import "./style.css";
+import MonthSelect from "../MonthSelect";
 
 const BalanceTracker = () => {
   const [balance, setBalance] = useState(0);
@@ -41,6 +42,10 @@ const BalanceTracker = () => {
         <Box color={"gray"} fontWeight={"bold"} className="wellcome">
           Olá,{user.user_first_name}
         </Box>
+        <div className="month-box">
+          <MonthSelect />
+        </div>
+
         <Box className="values">
           <Box className="box-saldo">
             <Text fontSize="12px" color="gray">
