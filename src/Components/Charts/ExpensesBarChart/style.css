@@ -5,9 +5,9 @@
   border-width: 3px;
   border-radius: 20px;
   min-width: 45%;
-  width: 100%;
-  margin: 20px;
+  width: 95%;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   background-color: white;
-  padding: 30px;
+  padding: 40px;
+  margin-top: 20px;
 }
