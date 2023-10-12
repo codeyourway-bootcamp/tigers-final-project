@@ -16,7 +16,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       <RouterProvider
         router={createBrowserRouter([
           {
-            path: "/tigers-final-project",
+            path: "/",
             element: <LandingPage />,
           },
           {

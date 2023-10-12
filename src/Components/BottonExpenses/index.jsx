@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Box, Text } from "@chakra-ui/react";
 import { AiOutlineStock } from "react-icons/ai";
 import { Earnings } from "../../Components/Earnings";
@@ -7,20 +7,39 @@ import "./style.css";
 
 const BalanceTracker = () => {
   const [balance, setBalance] = useState(0);
+  const [rendimento, setRendimento] = useState(0);
+  const [despesas, setDespesas] = useState(0);
 
-  const handleAddIncome = () => {
-    setBalance(balance + parseFloat(income));
-  };
-
-  const handleAddExpense = () => {
-    setBalance(balance - parseFloat(expense));
-  };
+  const user = JSON.parse(localStorage.getItem("app@user"));
+  const [transactions, setTransactions] = useState(
+    JSON.parse(localStorage.getItem("transactions")) || []
+  );
+  useEffect(() => {
+    console.log("useEffect de dentro de BottonExpense");
+    setRendimento(
+      transactions.reduce((total, transaction) => {
+        if (transaction.type === "rendimento") {
+          return total + parseInt(transaction.value);
+        }
+        return total;
+      }, 0)
+    );
+    setDespesas(
+      transactions.reduce((total, transaction) => {
+        if (transaction.type === "despesa") {
+          return total + parseInt(transaction.value);
+        }
+        return total;
+      }, 0)
+    );
+    setBalance(rendimento - despesas);
+  }, [despesas, rendimento, transactions]);
 
   return (
     <Box className="box-balances">
       <Box className="box-balances-left">
         <Box color={"gray"} fontWeight={"bold"} className="wellcome">
-          Olá, Fulano
+          Olá,{user.user_first_name}
         </Box>
         <Box className="values">
           <Box className="box-saldo">
@@ -28,7 +47,7 @@ const BalanceTracker = () => {
               Saldo:
             </Text>
             <Text fontSize="lg" fontWeight="bold" color="gray">
-              R$ {balance.toFixed(2)}
+              R$ {balance}
             </Text>
           </Box>
           <Box className="box-rendimento">
@@ -36,7 +55,7 @@ const BalanceTracker = () => {
               Rendimento mensal:
             </Text>
             <Text fontSize="lg" fontWeight="bold" color="green">
-              R$ {balance.toFixed(2)}
+              R$ {rendimento}
             </Text>
           </Box>
           <Box className="box-despesas">
@@ -44,7 +63,7 @@ const BalanceTracker = () => {
               Despesas mensal:
             </Text>
             <Text fontSize="lg" fontWeight="bold" color="red">
-              R$ {balance.toFixed(2)}
+              R$ {despesas}
             </Text>
           </Box>
           <Link to="/charts">
@@ -64,7 +83,10 @@ const BalanceTracker = () => {
       <Box className="box-balances-right">
         <h2>Operações</h2>
         <Box className="operations">
-          <Earnings />
+          <Earnings
+            setTransactions={setTransactions}
+            transactions={transactions}
+          />
         </Box>
       </Box>
     </Box>

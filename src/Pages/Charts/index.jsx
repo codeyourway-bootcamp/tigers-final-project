@@ -1,24 +1,40 @@
 import Navbar from "../../Components/Navbar";
-import BottonNavigate from "../../Components/BottomNavigate";
-import ExpenseBarChart from "../../Components/Charts/ExpensesBarChart";
-import BalanceTracker from "../../Components/BottonExpenses";
 import "./style.css";
+import BottomNavigate from "../../Components/BottomNavigate";
+import Footer from "../../Components/Footer";
+import BalanceTracker from "../../Components/BottonExpenses";
 import { Box } from "@chakra-ui/react";
+import ExpenseBarChart from "../../Components/Charts/ExpensesBarChart";
 
 function Charts() {
+  const pageStyles = {
+    backgroundColor: "rgba(238, 237, 237, 0.5)",
+    minHeight: "100vh",
+  };
+
+  const styleH2 = {
+    fontWeight: "bold",
+    color: "gray",
+    fontSize: "24px",
+    paddingLeft: "20px",
+    marginTop: "20px",
+  };
+
   return (
-    <Box className="container-charts">
+    <Box style={pageStyles}>
       <Navbar isTransparent={false} isLandingPage={false} />
-      <Box className="charts-content">
-        <Box className="balance-tracker-box">
-          <BalanceTracker />
+      <Box className="container-charts">
+        <BalanceTracker />
+        <Box className="charts-content">
+          <h2 style={styleH2}>Gráficos</h2>
+          <Box className="Box-charts">
+            <ExpenseBarChart />
+          </Box>
+          <BottomNavigate />
         </Box>
-        <Box className="chart-box">
-          <h1>Charts</h1>
-          <ExpenseBarChart />
-        </Box>
-        <BottonNavigate />
       </Box>
+
+      <Footer simple={true} />
     </Box>
   );
 }
